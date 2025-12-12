@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santosh Electricals | Premium Electrical Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --secondary: #8b5cf6;
+            --accent: #f59e0b;
+            --dark: #111827;
+            --light: #f9fafb;
+            --gray: #374151;
+            --gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --gradient-dark: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: white;
+        }
+
+        .logo i {
+            color: var(--primary);
+            font-size: 1.8rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .whatsapp-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-header:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            padding: 15px 0;
+            scrollbar-width: thin;
+            margin-top: 15px;
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .nav-links::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .nav-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            white-space: nowrap;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: var(--gradient);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(17, 24, 39, 0.9), rgba(30, 41, 59, 0.9));
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #d1d5db;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--gradient-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(59, 130, 246, 0.6);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* Category Tabs */
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 40px;
+            background: rgba(30, 41, 59, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .category-tab {
+            padding: 12px 24px;
+            background: rgba(55, 65, 81, 0.5);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #d1d5db;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .category-tab:hover {
+            background: rgba(59, 130, 246, 0.2);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .category-tab.active {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .product-card {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary);
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .product-img {
+            height: 200px;
+            background: rgba(17, 24, 39, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.4s;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+
+        .default-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.7;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .product-brand {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .product-specs {
+            margin-bottom: 15px;
+        }
+
+        .spec-item {
+            display: flex;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+
+        .spec-label {
+            font-weight: 600;
+            min-width: 80px;
+            color: #9ca3af;
+        }
+
+        .spec-value {
+            color: #e5e7eb;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .btn-order {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-order:hover {
+            background: var(--gradient-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Image Manager */
+        .image-manager {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(17, 24, 39, 0.98);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid var(--primary);
+            z-index: 2000;
+            width: 90%;
+            max-width: 500px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-manager.active {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translate(-50%, -60%); opacity: 0; }
+            to { transform: translate(-50%, -50%); opacity: 1; }
+        }
+
+        .manager-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1999;
+            backdrop-filter: blur(5px);
+        }
+
+        .manager-overlay.active {
+            display: block;
+        }
+
+        .manager-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .manager-content h3 {
+            color: white;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: rgba(55, 65, 81, 0.7);
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+
+        .manager-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+
+        .manager-btn:hover {
+            background: var(--gradient-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Manager Trigger Button */
+        .manager-trigger {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .manager-trigger:hover {
+            transform: scale(1.1) rotate(90deg);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.6);
+        }
+
+        /* Order Modal */
+        .order-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .order-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: rgba(30, 41, 59, 0.95);
+            border-radius: 15px;
+            max-width: 500px;
+            width: 100%;
+            overflow: hidden;
+            border: 2px solid var(--primary);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-header {
+            background: var(--gradient);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--gradient-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(17, 24, 39, 0.95);
+            padding: 60px 0 30px;
+            margin-top: 80px;
+            border-top: 2px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            color: #d1d5db;
+        }
+
+        .contact-item i {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .category-tabs {
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding-bottom: 15px;
+            }
+            
+            .category-tab {
+                white-space: nowrap;
+            }
+            
+            .nav-links {
+                overflow-x: auto;
+                gap: 15px;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-img {
+                height: 180px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+            
+            .whatsapp-header span {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-bolt"></i>
+                    <span>Santosh Electricals</span>
+                </div>
+                <a href="https://wa.me/919075998998" class="whatsapp-header" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="#led-bulbs"><i class="fas fa-lightbulb"></i> LED Bulbs</a>
+                <a href="#flood-lights"><i class="fas fa-sun"></i> Flood Lights</a>
+                <a href="#fans"><i class="fas fa-fan"></i> Fans</a>
+                <a href="#heaters"><i class="fas fa-fire"></i> Heaters</a>
+                <a href="#irons"><i class="fas fa-tshirt"></i> Irons</a>
+                <a href="#inverters"><i class="fas fa-bolt"></i> Inverters</a>
+                <a href="#batteries"><i class="fas fa-car-battery"></i> Batteries</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Premium Electrical Products</h1>
+            <p>Get Konexx, Su-vastika, Eastman, Orpat, and Oreva products with fast delivery in Satara. Your trusted electrical shop in Kesarkar Peth.</p>
+            <div class="cta-buttons">
+                <a href="#products" class="btn btn-primary">
+                    <i class="fas fa-shopping-cart"></i> Shop Now
+                </a>
+                <a href="https://wa.me/919075998998" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Order
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p style="color: #9ca3af; margin-top: 20px;">Select a category to browse products</p>
+            </div>
+            
+            <!-- Category Tabs -->
+            <div class="category-tabs" id="categoryTabs">
+                <button class="category-tab active" data-category="led-bulbs">
+                    <i class="fas fa-lightbulb"></i> LED Bulbs
+                </button>
+                <button class="category-tab" data-category="flood-lights">
+                    <i class="fas fa-sun"></i> Flood Lights
+                </button>
+                <button class="category-tab" data-category="fans">
+                    <i class="fas fa-fan"></i> Fans
+                </button>
+                <button class="category-tab" data-category="heaters">
+                    <i class="fas fa-fire"></i> Heaters
+                </button>
+                <button class="category-tab" data-category="irons">
+                    <i class="fas fa-tshirt"></i> Irons
+                </button>
+                <button class="category-tab" data-category="inverters">
+                    <i class="fas fa-bolt"></i> Inverters
+                </button>
+                <button class="category-tab" data-category="batteries">
+                    <i class="fas fa-car-battery"></i> Batteries
+                </button>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsContainer">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3 style="color: white; margin-bottom: 30px; font-family: 'Montserrat', sans-serif;">Santosh Electricals</h3>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ground Floor, S.NO. 150 Shop No 1, Vaidya Shantikul, Kesarkar Peth, Satara</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9075998998</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>10:00 AM - 8:30 PM (Everyday)</span>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/919075998998" class="btn btn-whatsapp" style="max-width: 250px; margin: 0 auto;" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Santosh Electricals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Manager Modal -->
+    <div class="manager-overlay" id="managerOverlay"></div>
+    <div class="image-manager" id="imageManager">
+        <button class="manager-close" id="managerClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="manager-content">
+            <h3>Add Product Image</h3>
+            <form id="imageForm">
+                <div class="form-group">
+                    <label for="productSelect">Select Product</label>
+                    <select id="productSelect" class="form-control" required>
+                        <option value="">Choose a product...</option>
+                        <!-- Options populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="imageUrl">Image URL</label>
+                    <input type="url" id="imageUrl" class="form-control" 
+                           placeholder="Paste image link here (e.g., https://example.com/image.jpg)"
+                           required>
+                    <p style="color: #9ca3af; font-size: 0.8rem; margin-top: 5px;">
+                        You can use links from Google Images, Imgur, or any image hosting service
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label for="imagePreview">Preview</label>
+                    <div id="imagePreview" style="background: rgba(55, 65, 81, 0.5); padding: 20px; border-radius: 8px; text-align: center; min-height: 100px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #9ca3af;">Image preview will appear here</span>
+                    </div>
+                </div>
+                <button type="submit" class="manager-btn">
+                    <i class="fas fa-save"></i> Save Image
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Image Manager Trigger Button -->
+    <button class="manager-trigger" id="managerTrigger" title="Add Product Images">
+        <i class="fas fa-image"></i>
+    </button>
+
+    <!-- Order Modal -->
+    <div class="order-modal" id="orderModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Place Your Order</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="orderForm">
+                    <div class="form-group">
+                        <input type="text" id="customerName" class="form-control" required placeholder="Your Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="customerPhone" class="form-control" required placeholder="WhatsApp Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="productName" class="form-control" required readonly placeholder="Product Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="quantity" class="form-control" value="1" min="1" required placeholder="Quantity">
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fab fa-whatsapp"></i> Send Order via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Products Data with image URLs
+        const productsData = {
+            "led-bulbs": [
+                { 
+                    id: "konexx-1w", 
+                    name: "Konexx 1W LED Bulb", 
+                    brand: "Konexx", 
+                    wattage: "1W",
+                    features: ["Multiple Colors", "Yellow, White, Orange, Purple"]
+                },
+                { 
+                    id: "konexx-5w", 
+                    name: "Konexx 5W LED Bulb", 
+                    brand: "Konexx", 
+                    wattage: "5W",
+                    features: ["Warm White", "Normal White"]
+                },
+                { 
+                    id: "konexx-7w", 
+                    name: "Konexx 7W LED Bulb", 
+                    brand: "Konexx", 
+                    wattage: "7W",
+                    features: ["Warm White", "Normal White"]
+                },
+                { 
+                    id: "konexx-9w", 
+                    name: "Konexx 9W LED Bulb", 
+                    brand: "Konexx", 
+                    wattage: "9W",
+                    features: ["Warm White", "Normal White"]
+                },
+                { 
+                    id: "konexx-12w", 
+                    name: "Konexx 12W LED Bulb", 
+                    brand: "Konexx", 
+                    wattage: "12W",
+                    features: ["Warm White", "Normal White"]
+                },
+                { 
+                    id: "konexx-15w", 
+                    name: "Konexx 15W LED Bulb", 
+                    brand: "Konexx", 
+                    wattage: "15W",
+                    features: ["Warm White", "Normal White"]
+                },
+                { 
+                    id: "konexx-20w", 
+                    name: "Konexx 20W LED Bulb", 
+                    brand: "Konexx", 
+                    wattage: "20W",
+                    features: ["Warm White", "Normal White"]
+                },
+                { 
+                    id: "konexx-30w", 
+                    name: "Konexx 30W LED Bulb", 
+                    brand: "Konexx", 
+                    wattage: "30W",
+                    features: ["Warm White", "Normal White"]
+                },
+                { 
+                    id: "konexx-50w", 
+                    name: "Konexx 50W LED Bulb", 
+                    brand: "Konexx", 
+                    wattage: "50W",
+                    features: ["Warm White", "Normal White"]
+                }
+            ],
+            "flood-lights": [
+                { 
+                    id: "konexx-20w-flood", 
+                    name: "Konexx 20W Flood Light", 
+                    brand: "Konexx", 
+                    wattage: "20W",
+                    features: ["IP66 Waterproof", "Outdoor Use"]
+                },
+                { 
+                    id: "konexx-30w-flood", 
+                    name: "Konexx 30W Flood Light", 
+                    brand: "Konexx", 
+                    wattage: "30W",
+                    features: ["IP66 Waterproof", "Bright Light"]
+                },
+                { 
+                    id: "konexx-50w-flood", 
+                    name: "Konexx 50W Flood Light", 
+                    brand: "Konexx", 
+                    wattage: "50W",
+                    features: ["IP66 Waterproof", "High Brightness"]
+                },
+                { 
+                    id: "konexx-100w-flood", 
+                    name: "Konexx 100W Flood Light", 
+                    brand: "Konexx", 
+                    wattage: "100W",
+                    features: ["IP66 Waterproof", "RGB Variant Available"]
+                }
+            ],
+            "fans": [
+                { 
+                    id: "orpat-1200mm", 
+                    name: "Orpat 1200mm Ceiling Fan", 
+                    brand: "Orpat", 
+                    size: "1200mm",
+                    features: ["BLDC Technology", "Energy Efficient"]
+                },
+                { 
+                    id: "konexx-600mm", 
+                    name: "Konexx 600mm Ceiling Fan", 
+                    brand: "Konexx", 
+                    size: "600mm",
+                    features: ["Normal Fan", "Compact Size"]
+                },
+                { 
+                    id: "konexx-1200mm", 
+                    name: "Konexx 1200mm Ceiling Fan", 
+                    brand: "Konexx", 
+                    size: "1200mm",
+                    features: ["Normal Fan", "Standard Size"]
+                }
+            ],
+            "heaters": [
+                { 
+                    id: "konexx-400-800", 
+                    name: "Konexx 400/800 Room Heater", 
+                    brand: "Konexx", 
+                    wattage: "400W/800W",
+                    features: ["Super Slim Design", "Dual Wattage"]
+                },
+                { 
+                    id: "konexx-1000-1800", 
+                    name: "Konexx 1000/1800 Room Heater", 
+                    brand: "Konexx", 
+                    wattage: "1000W/1800W",
+                    features: ["Super Slim Design", "High Power"]
+                },
+                { 
+                    id: "oreva-1000-2000", 
+                    name: "Oreva 1000/2000 Room Heater", 
+                    brand: "Oreva", 
+                    wattage: "1000W/2000W",
+                    features: ["Slim Design", "Dual Wattage"]
+                }
+            ],
+            "irons": [
+                { 
+                    id: "konexx-750w-iron", 
+                    name: "Konexx Heavy Weight Electric Iron", 
+                    brand: "Konexx", 
+                    wattage: "750W",
+                    features: ["Temperature Control", "Easy Grip"]
+                },
+                { 
+                    id: "konexx-1000w-iron", 
+                    name: "Konexx Light Weight Electric Iron", 
+                    brand: "Konexx", 
+                    wattage: "1000W",
+                    features: ["Temperature Control", "Steam Function"]
+                }
+            ],
+            "inverters": [
+                { 
+                    id: "su-850va", 
+                    name: "Su-vastika 850VA Pure Sine Wave", 
+                    brand: "Su-vastika", 
+                    capacity: "850VA (12V)",
+                    features: ["Pure Sine Wave", "Home UPS"]
+                },
+                { 
+                    id: "su-1250va", 
+                    name: "Su-vastika 1250VA Pure Sine Wave", 
+                    brand: "Su-vastika", 
+                    capacity: "1250VA (12V)",
+                    features: ["Pure Sine Wave", "Home UPS"]
+                },
+                { 
+                    id: "su-1350va", 
+                    name: "Su-vastika 1350VA Pure Sine Wave", 
+                    brand: "Su-vastika", 
+                    capacity: "1350VA (12V)",
+                    features: ["Pure Sine Wave", "Home UPS"]
+                },
+                { 
+                    id: "su-1700va", 
+                    name: "Su-vastika 1700VA Pure Sine Wave", 
+                    brand: "Su-vastika", 
+                    capacity: "1700VA (12V)",
+                    features: ["Pure Sine Wave", "Home UPS"]
+                },
+                { 
+                    id: "su-2000va", 
+                    name: "Su-vastika 2000VA Pure Sine Wave", 
+                    brand: "Su-vastika", 
+                    capacity: "2000VA (24V)",
+                    features: ["Pure Sine Wave", "Home/Commercial"]
+                },
+                { 
+                    id: "su-2500va", 
+                    name: "Su-vastika 2500VA Pure Sine Wave", 
+                    brand: "Su-vastika", 
+                    capacity: "2500VA (24V)",
+                    features: ["Pure Sine Wave", "Commercial UPS"]
+                },
+                { 
+                    id: "su-4kv", 
+                    name: "Su-vastika 4KV Pure Sine Wave", 
+                    brand: "Su-vastika", 
+                    capacity: "4KV (48V)",
+                    features: ["Pure Sine Wave", "Industrial Grade"]
+                },
+                { 
+                    id: "su-5.5kv", 
+                    name: "Su-vastika 5.5KV Pure Sine Wave", 
+                    brand: "Su-vastika", 
+                    capacity: "5.5KV (48V)",
+                    features: ["Pure Sine Wave", "High Capacity"]
+                }
+            ],
+            "batteries": [
+                { 
+                    id: "eastman-150ah-tubular", 
+                    name: "Eastman 150AH Tubular Battery", 
+                    brand: "Eastman", 
+                    capacity: "150AH",
+                    features: ["Tubular Type", "3 Years Warranty"]
+                },
+                { 
+                    id: "eastman-200ah-tubular", 
+                    name: "Eastman 200AH Tubular Battery", 
+                    brand: "Eastman", 
+                    capacity: "200AH",
+                    features: ["Tubular Type", "3 Years Warranty"]
+                },
+                { 
+                    id: "eastman-150ah-short", 
+                    name: "Eastman 150AH Short Tubular", 
+                    brand: "Eastman", 
+                    capacity: "150AH",
+                    features: ["Short Tubular", "3 Years Warranty"]
+                },
+                { 
+                    id: "eastman-200ah-short", 
+                    name: "Eastman 200AH Short Tubular", 
+                    brand: "Eastman", 
+                    capacity: "200AH",
+                    features: ["Short Tubular", "3 Years Warranty"]
+                }
+            ]
+        };
+
+        // DOM Elements
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        const productsContainer = document.getElementById('productsContainer');
+        const managerTrigger = document.getElementById('managerTrigger');
+        const managerOverlay = document.getElementById('managerOverlay');
+        const imageManager = document.getElementById('imageManager');
+        const managerClose = document.getElementById('managerClose');
+        const productSelect = document.getElementById('productSelect');
+        const imageUrlInput = document.getElementById('imageUrl');
+        const imagePreview = document.getElementById('imagePreview');
+        const imageForm = document.getElementById('imageForm');
+        const orderModal = document.getElementById('orderModal');
+        const modalClose = document.getElementById('modalClose');
+        const orderForm = document.getElementById('orderForm');
+        const productNameInput = document.getElementById('productName');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        // Product images storage
+        let productImages = {};
+
+        // Initialize the page
+        function init() {
+            // Load saved images from localStorage
+            loadProductImages();
+            
+            // Show default category
+            showCategory('led-bulbs');
+            
+            // Populate product select in manager
+            populateProductSelect();
+            
+            // Setup event listeners
+            setupEventListeners();
+            
+            // Initialize animations
+            initAnimations();
+        }
+
+        // Load product images
+        function loadProductImages() {
+            const saved = localStorage.getItem('santoshElectricalsProductImages');
+            if (saved) {
+                productImages = JSON.parse(saved);
+            }
+        }
+
+        // Save product images
+        function saveProductImages() {
+            localStorage.setItem('santoshElectricalsProductImages', JSON.stringify(productImages));
+        }
+
+        // Populate product select dropdown
+        function populateProductSelect() {
+            productSelect.innerHTML = '<option value="">Choose a product...</option>';
+            
+            Object.keys(productsData).forEach(category => {
+                productsData[category].forEach(product => {
+                    const option = document.createElement('option');
+                    option.value = product.id;
+                    option.textContent = `${product.brand} - ${product.name}`;
+                    productSelect.appendChild(option);
+                });
+            });
+        }
+
+        // Show products for a category
+        function showCategory(category) {
+            const products = productsData[category] || [];
+            productsContainer.innerHTML = '';
+            
+            if (products.length === 0) {
+                productsContainer.innerHTML = `
+                    <div style="text-align: center; padding: 60px; color: #9ca3af; grid-column: 1 / -1;">
+                        <i class="fas fa-box-open" style="font-size: 3rem; margin-bottom: 20px; opacity: 0.5;"></i>
+                        <h3 style="color: #d1d5db;">No products in this category</h3>
+                    </div>
+                `;
+                return;
+            }
+            
+            products.forEach(product => {
+                const imageUrl = productImages[product.id] || '';
+                
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <div class="product-img">
+                        ${imageUrl ? 
+                            `<img src="${imageUrl}" alt="${product.name}" loading="lazy">` : 
+                            `<i class="fas fa-box default-icon"></i>`
+                        }
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">${product.name}</div>
+                        <div class="product-brand">${product.brand}</div>
+                        <div class="product-specs">
+                            ${product.wattage ? `<div class="spec-item"><span class="spec-label">Wattage:</span><span class="spec-value">${product.wattage}</span></div>` : ''}
+                            ${product.capacity ? `<div class="spec-item"><span class="spec-label">Capacity:</span><span class="spec-value">${product.capacity}</span></div>` : ''}
+                            ${product.size ? `<div class="spec-item"><span class="spec-label">Size:</span><span class="spec-value">${product.size}</span></div>` : ''}
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn btn-order" data-product='${JSON.stringify(product)}'>
+                                <i class="fab fa-whatsapp"></i> Order Now
+                            </button>
+                        </div>
+                    </div>
+                `;
+                productsContainer.appendChild(productCard);
+            });
+            
+            // Add event listeners to order buttons
+            document.querySelectorAll('.btn-order').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const productData = JSON.parse(this.getAttribute('data-product'));
+                    openOrderModal(productData);
+                });
+            });
+            
+            // Animate cards
+            animateCards();
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Category tabs
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const category = tab.getAttribute('data-category');
+                    
+                    // Update active tab
+                    categoryTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    
+                    // Update nav link
+                    navLinks.forEach(link => {
+                        if (link.getAttribute('href') === `#${category}`) {
+                            link.classList.add('active');
+                        } else if (link.getAttribute('href') !== '#home') {
+                            link.classList.remove('active');
+                        }
+                    });
+                    
+                    // Show products
+                    showCategory(category);
+                    
+                    // Scroll to products
+                    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    // Update active nav link
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    if (targetId === 'home') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else if (productsData[targetId]) {
+                        // Update active tab
+                        categoryTabs.forEach(tab => {
+                            if (tab.getAttribute('data-category') === targetId) {
+                                tab.click();
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Image manager
+            managerTrigger.addEventListener('click', () => {
+                imageManager.classList.add('active');
+                managerOverlay.classList.add('active');
+            });
+
+            managerClose.addEventListener('click', () => {
+                imageManager.classList.remove('active');
+                managerOverlay.classList.remove('active');
+            });
+
+            managerOverlay.addEventListener('click', () => {
+                imageManager.classList.remove('active');
+                managerOverlay.classList.remove('active');
+            });
+
+            // Image URL input preview
+            imageUrlInput.addEventListener('input', () => {
+                const url = imageUrlInput.value.trim();
+                if (url) {
+                    imagePreview.innerHTML = `
+                        <img src="${url}" style="max-width: 100%; max-height: 200px; border-radius: 5px;" 
+                             onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\'color:#ef4444\'>Invalid image URL</span>'">
+                    `;
+                } else {
+                    imagePreview.innerHTML = '<span style="color: #9ca3af;">Image preview will appear here</span>';
+                }
+            });
+
+            // Image form submission
+            imageForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const productId = productSelect.value;
+                const imageUrl = imageUrlInput.value.trim();
+                
+                if (!productId) {
+                    alert('Please select a product first.');
+                    return;
+                }
+                
+                if (!imageUrl) {
+                    alert('Please enter an image URL.');
+                    return;
+                }
+                
+                // Save image
+                productImages[productId] = imageUrl;
+                saveProductImages();
+                
+                // Show success
+                alert('Image saved successfully! The product will now show this image.');
+                
+                // Reset form
+                imageForm.reset();
+                imagePreview.innerHTML = '<span style="color: #9ca3af;">Image preview will appear here</span>';
+                
+                // Update current display if product is shown
+                updateProductImage(productId, imageUrl);
+                
+                // Close manager
+                imageManager.classList.remove('active');
+                managerOverlay.classList.remove('active');
+            });
+
+            // Order modal
+            modalClose.addEventListener('click', () => {
+                orderModal.classList.remove('active');
+            });
+
+            // Order form
+            orderForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('customerName').value;
+                const phone = document.getElementById('customerPhone').value;
+                const product = document.getElementById('productName').value;
+                const quantity = document.getElementById('quantity').value;
+                
+                // Format WhatsApp message
+                const message = `Hello Santosh Electricals!%0A%0A*Order Details:*%0A- *Name:* ${name}%0A- *Phone:* ${phone}%0A- *Product:* ${product}%0A- *Quantity:* ${quantity}%0A%0APlease confirm my order.`;
+                
+                // Open WhatsApp
+                window.open(`https://wa.me/919075998998?text=${message}`, '_blank');
+                
+                // Close modal
+                orderModal.classList.remove('active');
+                orderForm.reset();
+                document.getElementById('quantity').value = 1;
+            });
+        }
+
+        // Initialize animations
+        function initAnimations() {
+            // Intersection Observer for fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            // Observe product cards
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        }
+
+        // Animate cards on category change
+        function animateCards() {
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        }
+
+        // Update product image display
+        function updateProductImage(productId, imageUrl) {
+            const productCard = document.querySelector(`[data-product*="${productId}"]`);
+            if (productCard) {
+                const imgContainer = productCard.querySelector('.product-img');
+                imgContainer.innerHTML = `<img src="${imageUrl}" alt="Product" loading="lazy">`;
+            }
+        }
+
+        // Open order modal
+        function openOrderModal(product) {
+            productNameInput.value = product.name;
+            orderModal.classList.add('active');
+        }
+
+        // Initialize
+        init();
+    </script>
+</body>
+</html>
